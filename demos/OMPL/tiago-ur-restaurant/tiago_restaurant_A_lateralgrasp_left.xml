@@ -6,6 +6,21 @@
 		<Limits name="Z" min="0.0985" max="0.0986" />
 		<ViewLink name="gripper_left_finger_link" />
 	</Robot>
+
+	<Robot robot="robots/YuMi/yumi_right_arm.urdf" >
+	<Home TH="0.0" WZ="0.0" WY="0.0" WX="0.5" Z="0.5" Y="-10.25" X="5.75" />
+      <InvKinematic name="YUMI_RIGHT" />
+    </Robot>
+
+   <Robot robot="robots/YuMi/yumi_left_arm.urdf"  >
+	<Home TH="0.0" WZ="0.0" WY="0.0" WX="0.5" Z="0.5" Y="-10.25" X="5.75" />
+      <InvKinematic name="YUMI_LEFT" />
+    </Robot>
+	
+   <Obstacle obstacle="robots/YuMi/yumi_body.urdf"   >
+      <Home TH="0.0" WZ="0.0" WY="0.0" WX="0.5" Z="0.5" Y="-10.25" X="5.75" />
+   </Obstacle>
+	
 	<Obstacle obstacle="obstacles/restaurant/restaurant.urdf" scale="1">
 		<Home TH="0" WZ="0.0" WY="0.0" WX="0.0" Z="0.0" Y="0" X="0" />
 	</Obstacle>
