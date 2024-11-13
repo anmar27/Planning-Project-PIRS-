@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Problem name="Tiago fixed in restaurant">
 	<Robot robot="robots/tiago/tiago_left_try.urdf" scale="1.0">
-		<Limits name="X" min="-3.0" max="3.0" />
-		<Limits name="Y" min="-3.0" max="3.0" />
+		<Limits name="X" min="-6.0" max="6.0" />
+		<Limits name="Y" min="-11.0" max="0.12" />
 		<Limits name="Z" min="0.0985" max="0.0986" />
 		<ViewLink name="gripper_left_finger_link" />
 	</Robot>
@@ -24,7 +24,7 @@
 	<Obstacle obstacle="obstacles/restaurant/restaurant.urdf" scale="1">
 		<Home TH="0" WZ="0.0" WY="0.0" WX="0.0" Z="0.0" Y="0" X="0" />
 	</Obstacle>
-	<Controls robot="controls/tiago_simple_only_arm_gripper_counterA_left.cntr" />
+	<Controls robot="controls/tiago_simple_arm_base.cntr" />
 	<Planner>
 		<Parameters>
 			<Name>omplRRTConnect</Name>
@@ -38,8 +38,9 @@
 		</Parameters>
 		<Queries>
 			<Query>
-				<Init dim="9">0.459 1 0.586 0.312 0.801 0 0.959 0.481 1</Init>
-				<Goal dim="9">0.767 1 0.583 0.62 0.816 0.609 0.5 0.417 1</Goal>
+				# Tiago: X,Y,RZ,TORSO,ARM1,ARM2,ARM3,ARM4,ARM5,ARM6,ARM7,GRIPPER 
+				<Init dim="12">0 0 0.586 0.62 0.801 0 0.959 0.481 1 0 0 0</Init>
+				<Goal dim="12">0 1 0.586 0.62 0.5 0.609 0.5 0.417 1 0 0 0</Goal>
 			</Query>
 		</Queries>
 	</Planner>
