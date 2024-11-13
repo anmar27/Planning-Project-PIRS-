@@ -8,17 +8,17 @@
 	</Robot>
 
 	<Robot robot="robots/YuMi/yumi_right_arm.urdf" >
-	<Home TH="0.0" WZ="0.0" WY="0.0" WX="0.5" Z="0.5" Y="-10.25" X="5.75" />
+	<Home TH="1.57" WZ="1.0" WY="0.0" WX="0.0" Z="0.5" Y="-10.25" X="5.75" />
       <InvKinematic name="YUMI_RIGHT" />
     </Robot>
 
    <Robot robot="robots/YuMi/yumi_left_arm.urdf"  >
-	<Home TH="0.0" WZ="0.0" WY="0.0" WX="0.5" Z="0.5" Y="-10.25" X="5.75" />
+	<Home TH="1.57" WZ="1.0" WY="0.0" WX="0.0" Z="0.5" Y="-10.25" X="5.75" />
       <InvKinematic name="YUMI_LEFT" />
     </Robot>
 	
    <Obstacle obstacle="robots/YuMi/yumi_body.urdf"   >
-      <Home TH="0.0" WZ="0.0" WY="0.0" WX="0.5" Z="0.5" Y="-10.25" X="5.75" />
+      <Home TH="1.57" WZ="1.0" WY="0.0" WX="0.0" Z="0.5" Y="-10.25" X="5.75" />
    </Obstacle>
 	
 	<Obstacle obstacle="obstacles/restaurant/restaurant.urdf" scale="1">
