@@ -40,7 +40,7 @@
 			<Query>
 				# Tiago: X,Y,RZ,TORSO,ARM1,ARM2,ARM3,ARM4,ARM5,ARM6,ARM7,GRIPPER 
 				<Init dim="12">0.5 0.4 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</Init>
-				<Goal dim="12">0.9 0.4 0.25 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</Goal>
+				<Goal dim="12">0.342 0.771 0.75 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</Goal>
 			</Query>
 		</Queries>
 	</Planner>
