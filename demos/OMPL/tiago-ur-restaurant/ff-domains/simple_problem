@@ -1,0 +1,36 @@
+(define (problem object-handover)
+  (:domain object-manipulation)
+  
+  (:objects
+    ; Locations
+    prep_station handover_zone - location
+    
+    ; Robots
+    transport_robot - robot
+    
+    ; Objects
+    cocktail_glass - object
+  )
+
+  (:init
+    ; Define area characteristics
+    (is_prep_area prep_station)
+    (is_handover_location handover_zone)
+    
+    ; Initial object locations
+    (at cocktail_glass prep_station)
+    (robot_at transport_robot prep_station)
+    
+    ; Robot capabilities
+    (empty_hand transport_robot)
+    (can_reach transport_robot prep_station)
+    (can_reach transport_robot handover_zone)
+  )
+
+  (:goal
+    (and
+      ; Goal is to move the cocktail glass to the handover zone
+      (at cocktail_glass handover_zone)
+    )
+  )
+)
