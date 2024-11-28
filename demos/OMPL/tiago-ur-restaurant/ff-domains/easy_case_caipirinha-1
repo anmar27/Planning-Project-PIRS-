@@ -1,0 +1,46 @@
+(define (problem cocktail-handover-1)
+  (:domain cocktail-preparation)
+  
+  (:objects
+    ; Locations
+    prep_station handover_zone - location
+    
+    ; Robots
+    bartender_robot - robot
+    
+    ; Objects and ingredients
+    glass1 - glass
+    limon1 - ingredient
+    cocktail1 - cocktail
+  )
+
+  (:init
+    ; Define bar counter and handover areas
+    (is_bar_counter prep_station)
+    (is_handover_location handover_zone)
+    
+    ; Set initial locations
+    (at glass1 prep_station)
+    (at limon1 prep_station)
+    (robot_at bartender_robot prep_station)
+    
+    ; Initial object states
+    (is_empty glass1)
+    (is_limon limon1)
+    (empty_hand bartender_robot)
+    
+    ; Robot capabilities
+    (can_reach bartender_robot prep_station)
+    (can_reach bartender_robot handover_zone)
+    (can_prepare_cocktails bartender_robot)
+  )
+
+  (:goal
+    (and
+      ; Cocktail should be prepared and at handover zone
+      (is_prepared cocktail1)
+      (has_limon cocktail1)
+      (at glass1 handover_zone)
+    )
+  )
+)
