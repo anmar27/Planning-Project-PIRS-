@@ -1,0 +1,24 @@
+(define (problem object-handover)
+  (:domain object-manipulation)
+  
+  (:objects
+    ; Locations
+    prep_station handover_zone - location
+    
+    ; Robots
+    tiago - robot
+    
+    ; Objects
+    can - object
+  )
+  (:init
+    (robot_at tiago prep_station)
+    (at can prep_station)
+    (empty_hand tiago)
+    (can_reach tiago prep_station)
+    (can_reach tiago handover_zone)
+  )
+  (:goal
+    (at can handover_zone)
+  )
+)

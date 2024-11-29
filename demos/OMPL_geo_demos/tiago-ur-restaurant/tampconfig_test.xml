@@ -13,7 +13,7 @@
         <!-- (be careful: if the objects change their initial room then also the pddl problem file has to be set accordingly) -->
         <Initial>
             <Object name="TESTCAN" kthname="can">  1.57 1.0 0.0 0.0 1 -4 5.75</Object> <!-- orientation in axis-angle (vx,vy,vz,theta) like in the kautham problem files-->
-            <Robot name="TIAGO" controlfile="controls/tiago_simple_only_mobile.cntr"> 0.5 0.4 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </Robot>
+            <Robot name="TIAGO" controlfile="controls/tiago_simple_only_mobile.cntr"> 0.603 0.602 0.740 </Robot>
         </Initial>
     </States>
     <Actions>
