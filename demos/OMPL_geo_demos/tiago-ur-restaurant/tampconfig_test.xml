@@ -12,18 +12,18 @@
         <!-- The Graspcontrols will be to be changed accordingly the new intial object poses-->
         <!-- (be careful: if the objects change their initial room then also the pddl problem file has to be set accordingly) -->
         <Initial>
-            <Object name="TESTCAN" kthname="can">  1.57 1.0 0.0 0.0 1 -4 5.75</Object> <!-- orientation in axis-angle (vx,vy,vz,theta) like in the kautham problem files-->
+            <Object name="CAN" kthname="can">  1.57 1.0 0.0 0.0 1 -4 5.75</Object> <!-- orientation in axis-angle (vx,vy,vz,theta) like in the kautham problem files-->
             <Robot name="TIAGO" controlfile="controls/tiago_simple_only_mobile.cntr"> 0.603 0.602 0.740 </Robot>
         </Initial>
     </States>
     <Actions>
-        <Pick robot="TIAGO" object="TESTCAN" region="COUNTERA">
+        <Pick robot="TIAGO" object="CAN" region="PREP_STATION">
             <Rob> 0 </Rob> <!-- Index of the robot according to the order in the kautham problem file-->
             <Obj> can </Obj> <!-- Name of the object according to the urdf file included in the kautham problem file-->
             <Link> 14 </Link> <!-- Index of the robot link -->
             <Cont>controls/tiago_simple_only_arm_test_can.cntr</Cont>
-            <Regioncontrols> 0.635 0.766 0.611 0.611 0.754 0.5 0.5 0.5 0.5</Regioncontrols>
-            <Graspcontrols grasp="lateralgrasp"> 0.635 0.766 0.611 0.611 0.5 0.5 0.5 0.5 0.5</Graspcontrols>
+            <Regioncontrols> 0.623 0.865 0.738 0.609 0.583 0.5 0.5 0.5 0.5</Regioncontrols>
+            <Graspcontrols grasp="lateralgrasp"> 0.512 0.651 0.738 0.609 0.583 0.5 0.5 0.5 0.5</Graspcontrols>
             <!--Graspcontrols grasp="topgrasp"> 0.846 0.944 0.861 0.786 0.594 0.226 0.850 0.429 1.000</Graspcontrols-->
             <!--Pose>1.57 1.0 0.0 0.0 1 -4 5.75</Pose> <Orientation in quaternions qx qy qz qw -->
             <!--Grasptransf grasp="lateralgrasp">-0.185 0.0 0.1 -0.707 0 -0.707 0</Grasptransf--><!--Orientation in quaternions qx qy qz qw --><!-- -0.185 0.0 0.1 3.14 -1.57 0-->
@@ -41,21 +41,21 @@
              g3=[s3.t',s3.UnitQuaternion.v,s3.UnitQuaternion.s]
             -->
         </Pick>
-        <Place robot="TIAGO" object="TESTCAN" region="COUNTERB">
+        <Place robot="TIAGO" object="CAN" region="HANDOVER_ZONE">
             <Rob> 0 </Rob>
             <Obj> can </Obj>
             <Cont>controls/tiago_simple_only_arm_test_can.cntr</Cont>
-            <Regioncontrols> 0.635 0.766 0.611 0.611 0.5 0.5 0.5 0.5 0.5</Regioncontrols>
-            <Graspcontrols grasp= "lateralgrasp">0.635 0.766 0.611 0.476 0.242 0.5 0.5 0.5 0.50</Graspcontrols>
+            <Regioncontrols> 0.623 0.865 0.738 0.609 0.583 0.5 0.5 0.5 0.5</Regioncontrols>
+            <Graspcontrols grasp= "lateralgrasp">0.623 0.865 0.476 0.609 0.583 0.5 0.5 0.5 0.5</Graspcontrols>
             <!--Graspcontrols grasp="topgrasp"> 0.9 0.597 0.861 0.786 0.594 0.226 0.850 0.429 1.000</Graspcontrols-->
             <!--Poseregion>-0.95 -0.9 0.3 0.35  0.907 0.004158435855060816 0.014741266146302223 -0.9167522192001343 0.3991626501083374</Poseregion>
             <Pose> -0.910 0.314 0.9071908593177795 0.004158435855060816 0.014741266146302223 -0.9167522192001343 0.3991626501083374</Pose-->
         </Place>
-        <!--Move robot="TIAGO" region_from="COUNTERA" region_to="COUNTERB">
+        <Move robot="TIAGO" region_from="PREP_STATION" region_to="HANDOVER_ZONE">
             <Rob> 0 </Rob>
             <Cont>controls/tiago_simple_only_arm_gripper_counterA.cntr</Cont>
-            <InitControls> 0.603 0.602 0.740</InitControls>
-            <GoalControls> 0.475 0.541 0.508</GoalControls>
-        </Move-->
+            <InitControls> 0.841 0.54 0.286</InitControls>
+            <GoalControls> 0.813 0.54 0.286</GoalControls>
+        </Move>
     </Actions>
 </Config>
