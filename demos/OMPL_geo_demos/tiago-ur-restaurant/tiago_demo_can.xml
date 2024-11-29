@@ -3,7 +3,7 @@
 	<Robot robot="robots/tiago/tiago_left_try.urdf" scale="1.0">
 		<Limits name="X" min="-10.0" max="8.5" />
 		<Limits name="Y" min="-11.0" max="0.12" />
-		<Limits name="Z" min="0.0985" max="0.0986" />
+		<Limits name="Z" min="0.1285" max="0.1286" />
 		<ViewLink name="gripper_left_finger_link" />
 	</Robot>
 
