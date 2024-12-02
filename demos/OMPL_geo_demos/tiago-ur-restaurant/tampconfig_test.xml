@@ -44,7 +44,7 @@
         <Place robot="TIAGO" object="CAN" region="HANDOVER_ZONE">
             <Rob> 0 </Rob>
             <Obj> can </Obj>
-            <Cont>controls/tiago_simple_only_arm_test_can.cntr</Cont>
+            <Cont>controls/tiago_simple_only_arm_test_canB.cntr</Cont>
             <Regioncontrols> 0.623 0.865 0.738 0.609 0.583 0.5 0.5 0.5 0.5</Regioncontrols>
             <Graspcontrols grasp= "lateralgrasp">0.623 0.865 0.476 0.609 0.583 0.5 0.5 0.5 0.5</Graspcontrols>
             <!--Graspcontrols grasp="topgrasp"> 0.9 0.597 0.861 0.786 0.594 0.226 0.850 0.429 1.000</Graspcontrols-->
@@ -53,7 +53,7 @@
         </Place>
         <Move robot="TIAGO" region_from="PREP_STATION" region_to="HANDOVER_ZONE">
             <Rob> 0 </Rob>
-            <Cont>controls/tiago_simple_only_arm_gripper_counterA.cntr</Cont>
+            <Cont>controls/tiago_mobile_grasping_vertical.cntr</Cont>
             <InitControls> 0.841 0.54 0.286</InitControls>
             <GoalControls> 0.813 0.54 0.286</GoalControls>
         </Move>
