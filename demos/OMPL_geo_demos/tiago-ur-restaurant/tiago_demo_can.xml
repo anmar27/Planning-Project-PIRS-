@@ -8,9 +8,14 @@
 	</Robot>
 
 		
-   <Obstacle obstacle="obstacles/props/can.urdf"   >
+   <Obstacle obstacle="obstacles/props/can/can.urdf"   >
       <Home TH="1.57" WZ="1.0" WY="0.0" WX="0.0" Z="1" Y="-4" X="5.75" />
    </Obstacle>
+
+   <Obstacle obstacle="obstacles/props/lemon/lemon.urdf"   >
+      <Home TH="0.57" WZ="1.0" WY="0.0" WX="0.0" Z="0.457" Y="-9.75" X="5.35" />
+   </Obstacle>
+
 	
 	<Obstacle obstacle="obstacles/restaurant/restaurant.urdf" scale="1">
 		<Home TH="0" WZ="0.0" WY="0.0" WX="0.0" Z="0.0" Y="0" X="0" />
