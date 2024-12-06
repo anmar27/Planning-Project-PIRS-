@@ -1,0 +1,36 @@
+(define (problem lemon-to-glass-task)
+  (:domain lemon-manipulation)
+  
+  (:objects
+    r1 - robot
+    lemon - object
+    lowercounter-loc - location
+    glass-loc - location
+  )
+  
+  (:init
+    ; Robot initial position
+    (robot_at r1 lowercounter-loc)
+    
+    ; Lemon initial position
+    (at lemon lowercounter-loc)
+    
+    ; Location characteristics
+    (is_lowercounter lowercounter-loc)
+    (is_glass glass-loc)
+    
+    ; Robot can reach both locations
+    (can_reach r1 lowercounter-loc)
+    (can_reach r1 glass-loc)
+    
+    ; Robot starts with an empty hand
+    (empty_hand r1)
+  )
+  
+  (:goal
+    (and
+      (at lemon glass-loc)
+      (robot_at r1 glass-loc)
+    )
+  )
+)
