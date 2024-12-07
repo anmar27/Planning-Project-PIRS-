@@ -38,15 +38,15 @@
         <Move robot="TIAGO" region_from="PREP_STATION" region_to="HANDOVER_ZONE">
             <Rob> 0 </Rob>
             <Cont>controls/tiago_mobile_grasping_vertical.cntr</Cont>
-            <InitControls> 0.841 0.54 0.286</InitControls>
-            <GoalControls> 0.813 0.54 0.286</GoalControls>
+            <InitControls> 0.837 0.025 0.258</InitControls>
+            <GoalControls> 0.850 0.025 0.258</GoalControls>
         </Move>
         <Putonglass robot="TIAGO" object="LEMON" region="GLASS">
             <Rob> 0 </Rob>
             <Obj> lemon </Obj>
-            <Cont> controls/</Cont>
-            <Regioncontrols> 0.623 0.865 0.738 0.609 0.583 0.5 0.5 0.5 0.5</Regioncontrols>
-            <Graspcontrols grasp= "lateralgrasp">0.623 0.865 0.476 0.609 0.583 0.5 0.5 0.5 0.5</Graspcontrols>
+            <Cont> controls/final_tiago_only_arm_lemon_glass.cntr</Cont>
+            <Regioncontrols> 0.6 0.5 0.99 0.28 0.99 0.86 0.99 0.875</Regioncontrols>
+            <Graspcontrols grasp= "lateralgrasp"0.60.524 0.725 0.579 0.451 0.927 0.962 0.5</Graspcontrols>
         </Putonglass>
     </Actions>
 </Config>
