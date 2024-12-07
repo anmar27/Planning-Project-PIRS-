@@ -41,5 +41,12 @@
             <InitControls> 0.841 0.54 0.286</InitControls>
             <GoalControls> 0.813 0.54 0.286</GoalControls>
         </Move>
+        <Putonglass robot="TIAGO" object="LEMON" region="GLASS">
+            <Rob> 0 </Rob>
+            <Obj> lemon </Obj>
+            <Cont> controls/</Cont>
+            <Regioncontrols> 0.623 0.865 0.738 0.609 0.583 0.5 0.5 0.5 0.5</Regioncontrols>
+            <Graspcontrols grasp= "lateralgrasp">0.623 0.865 0.476 0.609 0.583 0.5 0.5 0.5 0.5</Graspcontrols>
+        </Putonglass>
     </Actions>
 </Config>
