@@ -29,8 +29,8 @@
 		</Parameters>
 		<Queries>
 			<Query>
-				<Init>0.837 0.25 0.258</Init>
-				<Goal>0.837 0.25 0.258</Goal>
+				<Init>0.837 0.025 0.258</Init>
+				<Goal>0.837 0.025 0.258</Goal>
 			</Query>
 		</Queries>
 	</Planner>

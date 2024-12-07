@@ -15,7 +15,7 @@
         <Initial>
             <Object name="CAN" kthname="can">  1.57 1.0 0.0 0.0 1 -4 5.75</Object> <!-- orientation in axis-angle (vx,vy,vz,theta) like in the kautham problem files-->
             <Object name="LEMON" kthname="lemon"> 1.57 1.0 0.0 0.0 1 -4 5.75</Object>
-            <Robot name="TIAGO" controlfile="controls/tiago_mobile_grasping_vertical.cntr"> 0.837 0.25 0.258</Robot>
+            <Robot name="TIAGO" controlfile="controls/tiago_mobile_grasping_vertical.cntr"> 0.837 0.025 0.258</Robot>
         </Initial>
     </States>
     <Actions>
