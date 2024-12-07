@@ -1,4 +1,4 @@
-	<?xml version="1.0"?>
+<?xml version="1.0"?>
 <Problem name="Tiago fixed in restaurant">
 	<Robot robot="robots/tiago/tiago_left_try.urdf" scale="1.0">
 		<Limits name="X" min="-10.0" max="8.5" />
@@ -6,24 +6,15 @@
 		<Limits name="Z" min="0.1285" max="0.1286" />
 		<ViewLink name="gripper_left_finger_link" />
 	</Robot>
-
-		
-   <Obstacle obstacle="obstacles/props/can/can.urdf"   >
-      <Home TH="1.57" WZ="1.0" WY="0.0" WX="0.0" Z="1" Y="-4" X="5.75" />
-   </Obstacle>
-
-   <Obstacle obstacle="obstacles/props/lemon/lemon.urdf"   >
-      <Home TH="0.57" WZ="1.0" WY="0.0" WX="0.0" Z="0.457" Y="-9.75" X="5.35" />
-   </Obstacle>
-
-	<!--Obstacle obstacle="obstacles/props/tray/tray.urdf"   >
-      <Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.91" Y="-9.85" X="5.68" />
-   </Obstacle-->
-
-	<Obstacle obstacle="obstacles/props/glass/glass.urdf"   >
-      <Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.9" Y="-10.05" X="5.35" />
-   </Obstacle>
-	
+	<Obstacle obstacle="obstacles/props/can/can.urdf">
+		<Home TH="1.57" WZ="1.0" WY="0.0" WX="0.0" Z="1" Y="-4" X="5.75" />
+	</Obstacle>
+	<Obstacle obstacle="obstacles/props/lemon/lemon.urdf">
+		<Home TH="0.57" WZ="1.0" WY="0.0" WX="0.0" Z="0.61" Y="-9.75" X="5.35" />
+	</Obstacle>
+	<Obstacle obstacle="obstacles/props/glass/glass.urdf">
+		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.9" Y="-10.05" X="5.35" />
+	</Obstacle>
 	<Obstacle obstacle="obstacles/restaurant/restaurant.urdf" scale="1">
 		<Home TH="0" WZ="0.0" WY="0.0" WX="0.0" Z="0.0" Y="0" X="0" />
 	</Obstacle>
@@ -41,7 +32,6 @@
 		</Parameters>
 		<Queries>
 			<Query>
-				# Tiago: X,Y,RZ,TORSO,ARM1,ARM2,ARM3,ARM4,ARM5,ARM6,ARM7,GRIPPER 
 				<Init dim="12">0.841 0.54 0.286 0.623 0.865 0.738 0.609 0.583 0.5 0.5 0.5 0.5</Init>
 				<Goal dim="12">0.841 0.54 0.286 0.512 0.651 0.738 0.609 0.583 0.5 0.5 0.5 0.5</Goal>
 			</Query>
