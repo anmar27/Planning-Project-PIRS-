@@ -15,7 +15,7 @@
         <Initial>
             <Object name="CAN" kthname="can">  1.57 1.0 0.0 0.0 1 -4 5.75</Object> <!-- orientation in axis-angle (vx,vy,vz,theta) like in the kautham problem files-->
             <Object name="LEMON" kthname="lemon"> 1.57 1.0 0.0 0.0 1 -4 5.75</Object>
-            <Robot name="TIAGO" controlfile="controls/tiago_simple_only_mobile.cntr"> 0.603 0.602 0.740 </Robot>
+            <Robot name="TIAGO" controlfile="controls/tiago_mobile_grasping_vertical.cntr"> 0.837 0.25 0.258</Robot>
         </Initial>
     </States>
     <Actions>
@@ -25,16 +25,16 @@
             <Link> 14 </Link> <!-- Index of the robot link -->
             <Cont>controls/final_tiago_only_arm_lemon_counter.cntr</Cont>
             <Regioncontrols> 0.6 0.5 0.99 0.28 0.99 0.86 0.99 0.875</Regioncontrols>
-            <Graspcontrols grasp="lateralgrasp"> 0.079 0.683 0.544 0.579 0.298 0.5 0.5 0.5 0.5</Graspcontrols>
+            <Graspcontrols grasp="lateralgrasp"> 0.079 0.871 0.544 0.579 0.609 0.5 0.5 0.5 0.5</Graspcontrols>
         </Pick>
-        <Place robot="TIAGO" object="CAN" region="HANDOVER_ZONE">
+        <!--Place robot="TIAGO" object="CAN" region="HANDOVER_ZONE">
             <Rob> 0 </Rob>
-            <Obj> can </Obj>
+            <Obj> lemon </Obj>
             <Cont>controls/tiago_simple_only_arm_test_canB.cntr</Cont>
             <Regioncontrols> 0.623 0.865 0.738 0.609 0.583 0.5 0.5 0.5 0.5</Regioncontrols>
             <Graspcontrols grasp= "lateralgrasp">0.623 0.865 0.476 0.609 0.583 0.5 0.5 0.5 0.5</Graspcontrols>
-            <!--Graspcontrols grasp="topgrasp"> 0.9 0.597 0.861 0.786 0.594 0.226 0.850 0.429 1.000</Graspcontrols-->
-        </Place>
+            <Graspcontrols grasp="topgrasp"> 0.9 0.597 0.861 0.786 0.594 0.226 0.850 0.429 1.000</Graspcontrols>
+        </Place-->
         <Move robot="TIAGO" region_from="PREP_STATION" region_to="HANDOVER_ZONE">
             <Rob> 0 </Rob>
             <Cont>controls/tiago_mobile_grasping_vertical.cntr</Cont>
