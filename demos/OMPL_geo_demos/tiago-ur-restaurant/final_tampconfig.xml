@@ -24,7 +24,7 @@
             <Link> 14 </Link> <!-- Index of the robot link -->
             <Cont>controls/final_tiago_only_arm_lemon_counter.cntr</Cont>
             <Regioncontrols> 0.6 0.5 0.99 0.28 0.99 0.86 0.99 0.875</Regioncontrols>
-            <Graspcontrols> grasp="lateralgrasp"> 0.079 0.871 0.544 0.579 0.609 0.5 0.5 0.5 0.5</Graspcontrols>
+            <Graspcontrols grasp="lateralgrasp"> 0.079 0.871 0.544 0.579 0.609 0.5 0.5 0.5 0.5</Graspcontrols>
         </Pick>
         <!--Place robot="TIAGO" object="CAN" region="HANDOVER_ZONE">
             <Rob> 0 </Rob>
@@ -45,7 +45,7 @@
             <Obj> lemon </Obj>
             <Cont> controls/final_tiago_only_arm_lemon_glass.cntr</Cont>
             <Regioncontrols> 0.6 0.5 0.99 0.28 0.99 0.86 0.99 0.875</Regioncontrols>
-            <Graspcontrols> grasp= "lateralgrasp"0.60.524 0.725 0.579 0.451 0.927 0.962 0.5</Graspcontrols>
+            <Graspcontrols grasp= "lateralgrasp">0.60.524 0.725 0.579 0.451 0.927 0.962 0.5</Graspcontrols>
         </Putonglass>
     </Actions>
 </Config>
