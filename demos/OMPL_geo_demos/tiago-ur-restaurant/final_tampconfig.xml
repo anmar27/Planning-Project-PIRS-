@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Config>
     <Problemfiles>
-        <pddldomain name="ff-domains/domain_basic_actions.pddl" />
-        <pddlproblem name="ff-domains/simple_problem" />
+        <pddldomain name="ff-domains/final_domain_lemon_actions.pddl" />
+        <pddlproblem name="ff-domains/final_lemon_problem" />
         <kautham name="final_tiago_restaurant.xml" />
         <directory name="/demos/OMPL_geo_demos/tiago-ur-restaurant/"/>
         <graspit name =""/> <!--leave it empty if no graspit is to be used -->
