@@ -4,7 +4,7 @@
     <Problemfiles>
         <pddldomain name="ff-domains/domain_basic_actions.pddl" />
         <pddlproblem name="ff-domains/simple_problem" />
-        <kautham name="tiago_demo_can.xml" />
+        <kautham name="final_tiago_restaurant.xml" />
         <directory name="/demos/OMPL_geo_demos/tiago-ur-restaurant/"/>
         <graspit name =""/> <!--leave it empty if no graspit is to be used -->
     </Problemfiles>
