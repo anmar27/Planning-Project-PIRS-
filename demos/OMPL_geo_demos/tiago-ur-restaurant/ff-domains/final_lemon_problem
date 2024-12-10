@@ -2,35 +2,35 @@
   (:domain lemon-manipulation)
   
   (:objects
-    r1 - robot
+    tiago - robot
     lemon - object
-    lowercounter-loc - location
-    glass-loc - location
+    lemonlowercounter - location
+    glassuppercounter - location
   )
   
   (:init
     ; Robot initial position
-    (robot_at r1 lowercounter-loc)
+    (robot_at tiago lemonlowercounter)
     
     ; Lemon initial position
-    (at lemon lowercounter-loc)
+    (at lemon lemonlowercounter)
     
     ; Location characteristics
-    (is_lowercounter lowercounter-loc)
-    (is_glass glass-loc)
+    (is_lowercounter lemonlowercounter)
+    (is_glass glassuppercounter)
     
     ; Robot can reach both locations
-    (can_reach r1 lowercounter-loc)
-    (can_reach r1 glass-loc)
+    (can_reach tiago lemonlowercounter)
+    (can_reach tiago glassuppercounter)
     
     ; Robot starts with an empty hand
-    (empty_hand r1)
+    (empty_hand tiago)
   )
   
   (:goal
     (and
-      (at lemon glass-loc)
-      (robot_at r1 glass-loc)
+      (at lemon glassuppercounter)
+      (robot_at tiago glassuppercounter)
     )
   )
 )
