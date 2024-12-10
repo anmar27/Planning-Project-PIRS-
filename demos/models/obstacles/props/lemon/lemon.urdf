@@ -10,7 +10,7 @@
             <!--origin xyz="0.001 0.00288 -0.013" rpy="0 0 0" /-->
             <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="lemon.dae" scale="0.37 0.37 0.37"/>
+                <mesh filename="lemon.dae" scale="0.3 0.3 0.3"/>
             </geometry>
             
             <material>
@@ -20,7 +20,7 @@
         </visual>
         <collision>
             <geometry>
-                <mesh filename="lemon.dae" scale="0.37 0.37 0.37"/>
+                <mesh filename="lemon.dae" scale="0.3 0.3 0.3"/>
             </geometry>
             <material>
                 <color rgba="234 239 43 1" />
