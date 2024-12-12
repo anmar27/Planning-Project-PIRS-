@@ -14,7 +14,7 @@
         <Initial>
             <!--Object name="CAN" kthname="can">  1.57 1.0 0.0 0.0 1 -4 5.75</Object--> <!-- orientation in axis-angle (vx,vy,vz,theta) like in the kautham problem files-->
             <Object name="LEMON" kthname="lemon"> 0.57 1.0 0.0 0.0 0.61 -9.75 5.35</Object>
-            <Robot name="TIAGO" controlfile="controls/tiago_mobile_grasping_vertical.cntr"> 0.837 0.025 0.258</Robot>
+            <Robot name="TIAGO" controlfile="controls/tiago_mobile_grasping_vertical.cntr"> 0.837 0.02 0.258</Robot>
         </Initial>
     </States>
     <Actions>
@@ -23,8 +23,8 @@
             <Obj> lemon </Obj> <!-- Name of the object according to the urdf file included in the kautham problem file-->
             <Link> 14 </Link> <!-- Index of the robot link -->
             <Cont>controls/final_tiago_only_arm_lemon_counter.cntr</Cont>
-            <Regioncontrols> 0.6 0.5 0.99 0.28 0.99 0.86 0.99 0.875</Regioncontrols>
-            <Graspcontrols grasp="lateralgrasp"> 0.079 0.871 0.544 0.579 0.609 0.5 0.5 </Graspcontrols>
+            <Regioncontrols> 0.6 0.5 0.99 0.28 0.99 0.86 0.99 0.5 0.5</Regioncontrols>
+            <Graspcontrols grasp="lateralgrasp"> 0.079 0.871 0.544 0.579 0.609 0.5 0.5 0.5 0.5</Graspcontrols>
         </Pick>
         <!--Place robot="TIAGO" object="CAN" region="HANDOVER_ZONE">
             <Rob> 0 </Rob>
@@ -43,9 +43,9 @@
         <Putonglass robot="TIAGO" object="LEMON" region="GLASSUPPERCOUNTER">
             <Rob> 0 </Rob>
             <Obj> lemon </Obj>
-            <Cont> controls/final_tiago_only_arm_lemon_glass.cntr</Cont>
-            <Regioncontrols> 0.6 0.5 0.99 0.28 0.99 0.86 0.99 0.875</Regioncontrols>
-            <Graspcontrols grasp= "lateralgrasp">0.6 0.524 0.725 0.579 0.451 0.927 0.962 0.5</Graspcontrols>
+            <Cont>controls/final_tiago_only_arm_lemon_glass.cntr</Cont>
+            <Regioncontrols> 0.6 0.5 0.99 0.28 0.99 0.86 0.99 0.875 0.5</Regioncontrols>
+            <Graspcontrols grasp= "lateralgrasp">0.6 0.524 0.725 0.579 0.451 0.927 0.962 0.5 0.5</Graspcontrols>
         </Putonglass>
     </Actions>
 </Config>

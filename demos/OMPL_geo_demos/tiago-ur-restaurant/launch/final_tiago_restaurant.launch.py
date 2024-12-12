@@ -19,7 +19,7 @@ def launch_setup(context, *args, **kwargs):
         executable='kautham_rosnode_server',
         name='kautham_rosnode_server',
         output={'both': 'screen'},
-        prefix=['xterm -e'],
+        #prefix=['xterm -e'],
      )
        
     task_server_node = Node(
@@ -38,6 +38,7 @@ def launch_setup(context, *args, **kwargs):
         arguments=[tampconfigfile_arg],
         parameters=[],
         output={'both': 'screen'},
+        prefix=['xterm -e']
     )
 
     return [

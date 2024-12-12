@@ -290,11 +290,18 @@ def main():
         print("****************************************************************************")
         try:
             line = line.replace(" ","")
+            print("1")
             print(globals()[line])
+            print("2")
             function = getattr(globals()[Line[0]], Line[0]) #e.g. MOVE
+            print(function)
+            print("3")
             arg1 = node
+            print("4")
             arg2 = globals()[line] #e.g. move
+            print("5")
             arg3 = info
+            print("6")
             arg4 = Line
             # print("Function = ", function)
             # print("arg1 = ",line)
