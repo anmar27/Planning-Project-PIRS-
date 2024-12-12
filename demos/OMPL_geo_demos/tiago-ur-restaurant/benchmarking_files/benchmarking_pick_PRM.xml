@@ -1,0 +1,10 @@
+<Benchmark Name = "RRTConnectMove">
+    <Problem File="OMPL_PRM_bigcube-s-passage_R2.xml" PlannerAlias="PRMrnd"/>
+	<Problem File="OMPL_PRMhalton_bigcube-s-passage_R2.xml" PlannerAlias="PRMhal"/>
+	<Problem File="OMPL_PRMsdk_bigcube-s-passage_R2.xml" PlannerAlias="PRMsdk"/>
+	<Problem File="OMPL_PRMgaussian_bigcube-s-passage_R2.xml" PlannerAlias="PRMgau"/>
+    <Parameter Name="maxTime" Value="10.0" />
+    <Parameter Name="runCount" Value="50" />
+    <Parameter Name="maxMem" Value="12000.0" />
+    <Parameter Name="filename" Value="result_move_RRTC.log" />
+</Benchmark>
