@@ -9,17 +9,17 @@ global path_r
 global putonglass
 putonglass = defaultdict(lambda: defaultdict(dict))
 
-def PUTONglass(node,putonglass,info,Line):  #management of the action on the task plan
+def PUTONGLASS(node,putonglass,info,Line):  #management of the action on the task plan
     print("**************************************************************************")
     print("  PUTONGLASS ACTION  ")
     print("**************************************************************************")
     action=Line[0]
     rob= Line[1]
     obstacle = Line[2]
-    glass = Line[3]
-    toLocation = Line[4]
+    #glass = Line[3]
+    toLocation = Line[3]
     
-    print(action +" "+rob+" "+obstacle+" "+glass+" "+toLocation)
+    print(action +" "+rob+" "+obstacle+" "+toLocation)
     obsName = putonglass['Obj'] #Obj_name 
     robotIndex = putonglass['Rob'] #Robot_name 
     init = putonglass['Regioncontrols']
