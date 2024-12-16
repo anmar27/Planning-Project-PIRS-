@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Config>
+    <Problemfiles>
+        <pddldomain name="ff-domains/final_domain_lemon_actions_v3.pddl" />
+        <pddlproblem name="ff-domains/final_lemon_problem_v3" />
+        <kautham name="final_tiago_restaurant.xml" />
+        <directory name="/demos/OMPL_geo_demos/tiago-ur-restaurant/"/>
+        <graspit name =""/> <!--leave it empty if no graspit is to be used -->
+    </Problemfiles>
+    <States>
+        <!-- You can set a different instance of the problem by modifying the intial object poses-->
+        <!-- The Graspcontrols will be to be changed accordingly the new intial object poses-->
+        <!-- (be careful: if the objects change their initial room then also the pddl problem file has to be set accordingly) -->
+        <Initial>
+            <!--Object name="CAN" kthname="can">  1.57 1.0 0.0 0.0 1 -4 5.75</Object--> <!-- orientation in axis-angle (vx,vy,vz,theta) like in the kautham problem files-->
+            <Object name="LEMON" kthname="lemon"> 0.57 1.0 0.0 0.0 0.61 -9.75 5.35</Object>
+            <Object name="GLASS" kthname="glass"> 0.00 1.0 0.0 0.0 0.925 -9.6 5.85</Object>
+            <Robot name="TIAGO" controlfile="controls/tiago_mobile_grasping_vertical.cntr"> 0.837 0.02 0.258</Robot>
+        </Initial>
+    </States>
+    <Actions>
+        <Pick robot="TIAGO" object="LEMON" region="LEMONLOWERCOUNTER">
+            <Rob> 0 </Rob> <!-- Index of the robot according to the order in the kautham problem file-->
+            <Obj> lemon </Obj> <!-- Name of the object according to the urdf file included in the kautham problem file-->
+            <Link> 14 </Link> <!-- Index of the robot link -->
+            <Cont>controls/final_tiago_only_arm_lemon_counter.cntr</Cont>
+            <Regioncontrols> 0.6 0.5 0.99 0.28 0.99 0.86 0.99 0.5 0.5</Regioncontrols>
+            <Graspcontrols grasp="lateralgrasp"> 0.079 0.835 0.544 0.579 0.534 0.436 0.470 0.590 0.99</Graspcontrols>
+        </Pick>
+        <Move robot="TIAGO" region_from="LEMONLOWERCOUNTER" region_to="GLASSUPPERCOUNTER">
+            <Rob> 0 </Rob>
+            <Cont>controls/tiago_mobile_grasping_vertical.cntr</Cont>
+            <InitControls> 0.837 0.025 0.258</InitControls>
+            <GoalControls> 0.850 0.025 0.258</GoalControls>
+        </Move>
+        <Putonglass robot="TIAGO" object="LEMON" region="GLASSUPPERCOUNTER">
+            <Rob> 0 </Rob>
+            <Obj> lemon </Obj>
+            <Cont>controls/final_tiago_only_arm_lemon_glass.cntr</Cont>
+            <Regioncontrols> 0.6 0.5 0.99 0.28 0.99 0.86 0.99 0.5 0.5</Regioncontrols>
+            <Graspcontrols grasp= "lateralgrasp">0.6 0.524 0.725 0.579 0.451 0.927 0.962 0.5 0.5</Graspcontrols>
+        </Putonglass>
+        <Pick robot="TIAGO" object="GLASS" region="GLASSUPPERCOUNTER">
+            <Rob> 0 </Rob> <!-- Index of the robot according to the order in the kautham problem file-->
+            <Obj> lemon </Obj> <!-- Name of the object according to the urdf file included in the kautham problem file-->
+            <Link> 14 </Link> <!-- Index of the robot link -->
+            <Cont>controls/final_tiago_only_arm_lemon_glass.cntr</Cont>
+            <Regioncontrols> 0.6 0.5 0.99 0.28 0.99 0.86 0.99 0.5 0.5</Regioncontrols>
+            <Graspcontrols grasp="lateralgrasp"> 0.99 0.538 0.605 0.568 0.207 0.455 0.5 0.5 0.99</Graspcontrols>
+        </Pick>
+        <Move robot="TIAGO" region_from="GLASSUPPERCOUNTER" region_to="TABLEA">
+            <Rob> 0 </Rob>
+            <Cont>controls/tiago_mobile_grasping_vertical.cntr</Cont>
+            <InitControls> 0.850 0.025 0.258</InitControls>
+            <GoalControls> 0.722 0.038 0.395</GoalControls>
+        </Move>
+    </Actions>
+</Config>

@@ -1,0 +1,42 @@
+(define (problem lemon-to-tableA-task)
+  (:domain lemon-manipulation)
+  
+  (:objects
+    tiago - robot
+    lemon glass - object
+    lemonlowercounter glassuppercounter tableA - location
+  )
+  
+  (:init
+    ; Robot initial position
+    (robot_at tiago lemonlowercounter)
+    
+    ; Objects' initial positions
+    (at lemon lemonlowercounter)
+    (at glass glassuppercounter)
+    
+    ; Location characteristics
+    (is_lowercounter lemonlowercounter)
+    (is_glass glassuppercounter)
+    (is_glass tableA)
+    
+    ; Robot can reach all relevant locations
+    (can_reach tiago lemonlowercounter)
+    (can_reach tiago glassuppercounter)
+    (can_reach tiago tableA)
+    
+    ; Robot starts with an empty hand
+    (empty_hand tiago)
+    
+    ; Glass characteristics
+    (is_glass_object glass)
+  )
+  
+  (:goal
+    (and
+      ; Robot at tableA holding the glass
+      (robot_at tiago tableA)
+      (holding tiago glass)
+    )
+  )
+)
