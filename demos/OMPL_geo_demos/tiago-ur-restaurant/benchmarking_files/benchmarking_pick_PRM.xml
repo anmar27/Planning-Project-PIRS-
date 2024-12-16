@@ -1,10 +1,11 @@
-<Benchmark Name = "PRMPick">
+<Benchmark Name = "Pick_benchmark">
     <Problem File="final_tiago_restaurant_PRM_rnd.xml" PlannerAlias="PRMrnd"/>
 	<Problem File="final_tiago_restaurant_PRM_halton.xml" PlannerAlias="PRMhal"/>
 	<Problem File="final_tiago_restaurant_PRM_sdk.xml" PlannerAlias="PRMsdk"/>
 	<Problem File="final_tiago_restaurant_PRM_gaussian.xml" PlannerAlias="PRMgau"/>
+    <Problem File="final_tiago_restaurant_move_RRTC.xml" PlannerAlias="RRTCon"/>
     <Parameter Name="maxTime" Value="10.0" />
     <Parameter Name="runCount" Value="50" />
     <Parameter Name="maxMem" Value="12000.0" />
-    <Parameter Name="filename" Value="result_Pick_PRMs.log" />
+    <Parameter Name="filename" Value="result_Pick.log" />
 </Benchmark>

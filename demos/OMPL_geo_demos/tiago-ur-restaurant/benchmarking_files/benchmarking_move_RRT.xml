@@ -1,7 +1,7 @@
 <Benchmark Name = "RRTMove">
     <Problem File="final_tiago_restaurant_RRTCon.xml" PlannerAlias="RRTConnect"/>
-	<Problem File="final_tiago_restaurant_RRTStar.xml" PlannerAlias="RRTStar"/>
-    <Parameter Name="maxTime" Value="10.0" />
+	<Problem File="final_tiago_restaurant_RRTStar.xml" PlannerAlias="RRT"/>
+    <Parameter Name="maxTime" Value="100.0" />
     <Parameter Name="runCount" Value="50" />
     <Parameter Name="maxMem" Value="12000.0" />
     <Parameter Name="filename" Value="result_Move_RRT.log" />
