@@ -10,16 +10,16 @@
         <DOF name="tiago/X3" value="0.5"></DOF>
 	<DOF name="tiago/wheel_right_link" value="0.5"/>
 	<DOF name="tiago/wheel_left_link" value="0.5"/>
-	<DOF name="tiago/torso_lift_link" value="0.6"/>
+	<DOF name="tiago/torso_lift_link" value="0.850"/>
 	<DOF name="tiago/head_1_link" value="0.594"/>
 	<DOF name="tiago/head_2_link" value="0.459"/>     
 	<DOF name="tiago/arm_1_link" value="0.5"/>
-	<DOF name="tiago/arm_2_link" value="0.99"/>
-	<DOF name="tiago/arm_3_link" value="0.28" />
-	<DOF name="tiago/arm_4_link" value="0.99" />
+	<DOF name="tiago/arm_2_link" value="0.342"/>
+	<DOF name="tiago/arm_3_link" value="0.99" />
+	<DOF name="tiago/arm_4_link" value="0.846" />
 	<DOF name="tiago/arm_5_link" value="0.86"/>
 	<DOF name="tiago/arm_6_link" value="0.99"/>
-	<DOF name="tiago/arm_7_link" value="0.5"/>
+	<DOF name="tiago/arm_7_link" value="0.5553"/>
 	<DOF name="tiago/gripper_left_finger_link" value="1.000"/>
         <DOF name="tiago/gripper_right_finger_link" value="1.000"/>
  </Offset>
