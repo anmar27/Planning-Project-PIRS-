@@ -30,8 +30,10 @@ import pytransform3d.transformations as pt
 import pytransform3d.rotations as pr
 
 #Add here any NEW action that can be done
-import MOVE, PICK, PLACE, DUMMY, PUTONGLASS
+import MOVE, PICK, PLACE, DUMMY, PUTONGLASS, PICKMULTIPLE
 #import TIAGO
+
+default_actions = ["MOVE", "PICK", "PLACE"] #List containing default actions
 
 #Function to write to xml file in Conf tag
 def writePath(taskfile,tex):
@@ -295,6 +297,9 @@ def main():
             print("2")
             function = getattr(globals()[Line[0]], Line[0]) #e.g. MOVE
             print(function)
+            string_func = str(function)
+            func_str_name = string_func.split()[1] 
+            print(string_func.split()[1])
             print("3")
             arg1 = node
             print("4")
@@ -307,6 +312,8 @@ def main():
             # print("arg1 = ",line)
             # print("info = ", info)
             # print("Line = ", Line)
+            if function not in default_actions:
+                ret = function(arg1, arg2, arg3, arg4)
             ret = function(arg1, arg2, arg3, arg4)
             # ret = getattr(globals()[Line[0]], Line[0]) (globals()[Line[0].lower()],info,Line)
             print("Action path planning returned:", ret)

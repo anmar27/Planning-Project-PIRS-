@@ -10,7 +10,7 @@
 		<Home TH="0.57" WZ="1.0" WY="0.0" WX="0.0" Z="0.61" Y="-9.75" X="5.35" />
 	</Obstacle>
 	<Obstacle obstacle="obstacles/props/glass/glass.urdf">
-		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.9" Y="-10.05" X="5.35" />
+		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.925" Y="-9.6" X="5.85" />
 	</Obstacle>
 	<Obstacle obstacle="obstacles/restaurant/restaurant.urdf" scale="1">
 		<Home TH="0" WZ="0.0" WY="0.0" WX="0.0" Z="0.0" Y="0" X="0" />
