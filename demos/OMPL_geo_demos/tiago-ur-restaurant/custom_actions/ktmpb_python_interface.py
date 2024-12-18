@@ -30,7 +30,7 @@ import pytransform3d.transformations as pt
 import pytransform3d.rotations as pr
 
 #Add here any NEW action that can be done
-import MOVE, PICK, PLACE, DUMMY, PUTONGLASS, PICKMULTIPLE
+import MOVE, PICK, PLACE, DUMMY, PUTONGLASS, PICKMULTIPLE, PLACEFULLGLASS
 #import TIAGO
 
 default_actions = ["MOVE", "PICK", "PLACE"] #List containing default actions
@@ -290,40 +290,42 @@ def main():
         print("****************************************************************************")
         print(" Processing taskPlan line ", Line)
         print("****************************************************************************")
-        try:
-            line = line.replace(" ","")
-            print("1")
-            print(globals()[line])
-            print("2")
-            function = getattr(globals()[Line[0]], Line[0]) #e.g. MOVE
-            print(function)
-            string_func = str(function)
-            func_str_name = string_func.split()[1] 
-            print(string_func.split()[1])
-            print("3")
-            arg1 = node
-            print("4")
-            arg2 = globals()[line] #e.g. move
-            print("5")
-            arg3 = info
-            print("6")
-            arg4 = Line
-            # print("Function = ", function)
-            # print("arg1 = ",line)
-            # print("info = ", info)
-            # print("Line = ", Line)
-            if function not in default_actions:
-                ret = function(arg1, arg2, arg3, arg4)
-            ret = function(arg1, arg2, arg3, arg4)
-            # ret = getattr(globals()[Line[0]], Line[0]) (globals()[Line[0].lower()],info,Line)
-            print("Action path planning returned:", ret)
-            if ret == False:
-                print("Action %s has not been defined" % Line[0])
-                break
-            else:
-                print("Action %s has been defined" % Line[0])
-        except:
-            print("!!!Action %s has not been defined" % Line[0])
+        #try:
+        line = line.replace(" ","")
+        print("1")
+        print(line)
+        print("EEEE")
+        print(globals()[line])
+        print("2")
+        function = getattr(globals()[Line[0]], Line[0]) #e.g. MOVE
+        print(function)
+        string_func = str(function)
+        func_str_name = string_func.split()[1] 
+        print(string_func.split()[1])
+        print("3")
+        arg1 = node
+        print("4")
+        arg2 = globals()[line] #e.g. move
+        print("5")
+        arg3 = info
+        print("6")
+        arg4 = Line
+        # print("Function = ", function)
+        # print("arg1 = ",line)
+        # print("info = ", info)
+        # print("Line = ", Line)
+        #if function not in default_actions:
+        #    ret = function(arg1, arg2, arg3, arg4)
+        ret = function(arg1, arg2, arg3, arg4)
+        # ret = getattr(globals()[Line[0]], Line[0]) (globals()[Line[0].lower()],info,Line)
+        print("Action path planning returned:", ret)
+        if ret == False:
+            print("Action %s has not been defined" % Line[0])
+            break
+        else:
+            print("Action %s has been defined" % Line[0])
+        #except:
+        #    print("!!!Action %s has not been defined" % Line[0])
 
 
     #Close kautham problem

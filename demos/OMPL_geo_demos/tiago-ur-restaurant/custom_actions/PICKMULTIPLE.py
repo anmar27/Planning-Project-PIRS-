@@ -20,11 +20,15 @@ def PICKMULTIPLE(node, pickmultiple,info,Line):  #management of the action on th
     action=Line[0]
     rob= Line[1]
     obstacle = Line[2]
+    #glass = Line[3]
     fromLocation = Line[3]
 
     print(action +" "+rob+" "+obstacle+" "+fromLocation)
     obsName = pickmultiple['Obj'] #Object_name
-    obsNameA = pickmultiple['ObjA'] #Obj1_name   
+    obsNameA = pickmultiple['ObjA'] #Obj1_name
+    print("This is test")
+    print(obsName)
+    print(obsNameA)
     robotIndex = pickmultiple['Rob'] #Robot_name 
     linkIndex = pickmultiple['Link']
     init = pickmultiple['Regioncontrols']
@@ -117,15 +121,15 @@ def PICKMULTIPLE(node, pickmultiple,info,Line):  #management of the action on th
                 tex=tex + str(path_r[i,j]) + " "
             ktmpb_python_interface.writePath(info.taskfile,tex)
         kautham.kMoveRobot(node, init)
-        # info.taskfile.write("\t</Transfer>")
+        #info.taskfile.write("\t</MultiTransfer>")
 
     else:
         print("**************************************************************************")
         print("Get path Failed! No Move after pickmultiple possible, Infeasible Task Plan")
         print("**************************************************************************")
-        return False#break
+        return False
 
-    return True#break
+    return True
     #return
 
 def Pickmultiple_read(action_element): #reading from the tamp configuration file
