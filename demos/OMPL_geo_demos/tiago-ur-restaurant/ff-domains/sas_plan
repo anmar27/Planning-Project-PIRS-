@@ -1,0 +1,4 @@
+(pick tiago can prep_station)
+(move tiago prep_station handover_zone)
+(place tiago can handover_zone)
+; cost = 3 (unit cost)

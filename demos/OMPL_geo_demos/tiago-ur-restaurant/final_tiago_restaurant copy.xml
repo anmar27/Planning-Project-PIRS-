@@ -12,19 +12,13 @@
 	<Obstacle obstacle="obstacles/props/glass/glass.urdf">
 		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.929" Y="-9.75" X="5.85" />
 	</Obstacle>
+	<Obstacle obstacle="obstacles/props/can/can.urdf">
+		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.55" Y="-9.85" X="5.25" />
+	</Obstacle>
 	<Obstacle obstacle="obstacles/restaurant/restaurant.urdf" scale="1">
 		<Home TH="0" WZ="0.0" WY="0.0" WX="0.0" Z="0.0" Y="0" X="0" />
 	</Obstacle>
-	<Obstacle obstacle="obstacles/props/can/can.urdf">
-		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.53" Y="-9.85" X="5.25" />
-	</Obstacle>
-	<Obstacle obstacle="obstacles/props/can/can2.urdf">
-		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.5" Y="-9.85" X="5.40" />
-	</Obstacle>
-	<Obstacle obstacle="obstacles/restaurant/auxiliar_blocks/aux_box_lemon.urdf" scale="1">
-		<Home TH="0" WZ="0.0" WY="0.0" WX="0.0" Z="0.85" Y="-9.57" X="5.45" />
-	</Obstacle>
-	<Controls robot="controls/tiago_mobile_grasping_vertical.cntr" />
+	<Controls robot="controls/final_tiago_only_arm_lemon_counter.cntr" />
 	<Planner>
 		<Parameters>
 			<Name>omplRRTConnect</Name>
@@ -38,13 +32,8 @@
 		</Parameters>
 		<Queries>
 			<Query>
-<<<<<<< HEAD
-				<Init>0.837 0.025 0.258</Init>
-				<Goal>0.068 0.346 0.327</Goal>
-=======
-				<Init dim="3">0.837 0.025 0.258</Init>
-				<Goal dim="3">0.837 0.025 0.258</Goal>
->>>>>>> origin/amf-branch
+				<Init dim="9">0.738 0.738 0.655 0.603 0.56 0.5 0.5 0.468 0.5</Init>
+				<Goal dim="9">0.079 0.81 0.572 0.571 0.512 0.5 0.5 0.5 0.5</Goal>
 			</Query>
 		</Queries>
 	</Planner>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 (define (problem lemon-to-tableA-task)
   (:domain lemon-manipulation)
   
@@ -39,4 +40,34 @@
       (holding tiago glass)
     )
   )
+=======
+(define (problem lemon-glass-task)
+    (:domain lemon-glass-manipulation)
+
+    (:objects
+        tiago - robot
+        lemon - object
+        glass - object
+        lemonlowercounter glassuppercounter tableA - location
+    )
+
+    (:init
+        ;; Initial locations of objects
+        (at lemon lemonlowercounter)
+        (at glass glassuppercounter)
+        (at-robot tiago lemonlowercounter)
+        
+        ;; Robot's hand is empty initially
+        (empty-hand tiago)
+    )
+
+    (:goal
+        (and
+            ;; Goal: Both lemon and glass are at tableA
+            (at lemon tableA)
+            (at glass tableA)
+            
+        )
+    )
+>>>>>>> origin/amf-branch
 )

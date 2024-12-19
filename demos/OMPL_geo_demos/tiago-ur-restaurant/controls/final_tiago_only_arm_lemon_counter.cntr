@@ -16,8 +16,8 @@
 		<DOF name="tiago/arm_5_link" value="0.500"/>
 		<DOF name="tiago/arm_6_link" value="0.500"/>
 		<DOF name="tiago/arm_7_link" value="0.500"/>
-		<DOF name="tiago/gripper_left_finger_link" value="0.500"/>
-		<DOF name="tiago/gripper_right_finger_link" value="0.500"/>
+		<DOF name="tiago/gripper_left_finger_link" value="1.000"/>
+		<DOF name="tiago/gripper_right_finger_link" value="1.000"/>
 
 	</Offset>
 
