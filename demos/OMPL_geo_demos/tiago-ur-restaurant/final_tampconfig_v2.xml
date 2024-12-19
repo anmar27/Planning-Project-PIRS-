@@ -25,7 +25,7 @@
             <Link> 14 </Link> <!-- Index of the robot link -->
             <Cont>controls/final_tiago_only_arm_lemon_counter.cntr</Cont>
             <Regioncontrols> 0.6 0.5 0.99 0.28 0.99 0.86 0.99 0.5 0.5</Regioncontrols>
-            <Graspcontrols grasp="lateralgrasp"> 0.079 0.81 0.572 0.571 0.512 0.5 0.5 0.5 0.5</Graspcontrols>
+            <Graspcontrols grasp="lateralgrasp">0.425 0.563 0.5 0.575 0.079 0.468 0.595 0.5 0.5</Graspcontrols>
         </Pick>
         <Move robot="TIAGO" region_from="LEMONLOWERCOUNTER" region_to="GLASSUPPERCOUNTER">
             <Rob> 0 </Rob>

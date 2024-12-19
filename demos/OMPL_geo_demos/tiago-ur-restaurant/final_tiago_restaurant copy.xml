@@ -12,10 +12,13 @@
 	<Obstacle obstacle="obstacles/props/glass/glass.urdf">
 		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.929" Y="-9.75" X="5.85" />
 	</Obstacle>
+	<Obstacle obstacle="obstacles/props/can/can.urdf">
+		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.55" Y="-9.85" X="5.25" />
+	</Obstacle>
 	<Obstacle obstacle="obstacles/restaurant/restaurant.urdf" scale="1">
 		<Home TH="0" WZ="0.0" WY="0.0" WX="0.0" Z="0.0" Y="0" X="0" />
 	</Obstacle>
-	<Controls robot="controls/final_tiago_only_arm_tableA.cntr" />
+	<Controls robot="controls/final_tiago_only_arm_lemon_counter.cntr" />
 	<Planner>
 		<Parameters>
 			<Name>omplRRTConnect</Name>
@@ -30,7 +33,7 @@
 		<Queries>
 			<Query>
 				<Init dim="9">0.738 0.738 0.655 0.603 0.56 0.5 0.5 0.468 0.5</Init>
-				<Goal dim="9">0.738 0.738 0.655 0.603 0.56 0.5 0.5 0.468 0.5</Goal>
+				<Goal dim="9">0.079 0.81 0.572 0.571 0.512 0.5 0.5 0.5 0.5</Goal>
 			</Query>
 		</Queries>
 	</Planner>

@@ -15,6 +15,12 @@
 	<Obstacle obstacle="obstacles/restaurant/restaurant.urdf" scale="1">
 		<Home TH="0" WZ="0.0" WY="0.0" WX="0.0" Z="0.0" Y="0" X="0" />
 	</Obstacle>
+	<Obstacle obstacle="obstacles/props/can/can.urdf">
+		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.53" Y="-9.85" X="5.25" />
+	</Obstacle>
+	<Obstacle obstacle="obstacles/props/can/can2.urdf">
+		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.5" Y="-9.85" X="5.40" />
+	</Obstacle>
 	<Obstacle obstacle="obstacles/restaurant/auxiliar_blocks/aux_box_lemon.urdf" scale="1">
 		<Home TH="0" WZ="0.0" WY="0.0" WX="0.0" Z="0.85" Y="-9.57" X="5.45" />
 	</Obstacle>

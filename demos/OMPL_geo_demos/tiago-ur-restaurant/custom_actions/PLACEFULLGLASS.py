@@ -96,7 +96,8 @@ def PLACEFULLGLASS(node,placefullglass,info,Line):  #management of the action on
             for j in range(0,k):
                 tex=tex + str(path_r[i,j]) + " "
             ktmpb_python_interface.writePath(info.taskfile,tex)
-        info.taskfile.write("\t</Transit>\n")
+        info.taskfile.write("\t</MultiTransfer>\n")
+
     else:
         print("**************************************************************************")
         print("Get path Failed! No Move possible after Placefullglass process, Infeasible Task Plan")
@@ -130,4 +131,4 @@ def Placefullglass_read(action_element): #reading from the tamp configuration fi
 
         placefullglass.update({el.tag : globals()[el.tag]})
 
-    return placefulglassy
+    return placefullglass
