@@ -1,0 +1,13 @@
+<Benchmark Name = "RRTMoveRange">
+    <Problem File="final_tiago_restaurant_move_RRTC1.xml" PlannerAlias="RRTC-0.01"/>
+    <Problem File="final_tiago_restaurant_move_RRTC2.xml" PlannerAlias="RRTC-0.05"/>
+    <Problem File="final_tiago_restaurant_move_RRTC3.xml" PlannerAlias="RRTC-0.10"/>
+	<Problem File="final_tiago_restaurant_move_RRTC4.xml" PlannerAlias="RRTC-0.25"/>
+    <Problem File="final_tiago_restaurant_move_RRTC5.xml" PlannerAlias="RRTC-0.50"/>
+    <Parameter Name="maxTime" Value="100.0" />
+    <Parameter Name="runCount" Value="50" />
+    <Parameter Name="maxMem" Value="12000.0" />
+    <Parameter Name="filename" Value="result_Move_RRT_Range.log" />
+</Benchmark>
+
+
