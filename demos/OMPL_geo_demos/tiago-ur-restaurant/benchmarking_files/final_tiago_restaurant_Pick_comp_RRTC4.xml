@@ -12,22 +12,28 @@
 	<Obstacle obstacle="obstacles/props/glass/glass.urdf">
 		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.9" Y="-10.05" X="5.35" />
 	</Obstacle>
+	<Obstacle obstacle="obstacles/props/can/can.urdf">
+		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.53" Y="-9.85" X="5.25" />
+	</Obstacle>
+	<Obstacle obstacle="obstacles/props/can/can2.urdf">
+		<Home TH="0.00" WZ="1.0" WY="0.0" WX="0.0" Z="0.5" Y="-9.85" X="5.40" />
+	</Obstacle>
 	<Obstacle obstacle="obstacles/restaurant/restaurant.urdf" scale="1">
 		<Home TH="0" WZ="0.0" WY="0.0" WX="0.0" Z="0.0" Y="0" X="0" />
 	</Obstacle>
-	<Controls robot="controls/tiago_mobile_grasping_vertical.cntr" />
+	<Controls robot="controls/final_tiago_only_arm_lemon_counter.cntr" />
 	<Planner>
 		<Parameters>
 			<Name>omplRRTConnect</Name>
 			<Parameter name="_Max Planning Time">1.0</Parameter>
 			<Parameter name="_Speed Factor">1</Parameter>
 			<Parameter name="_Simplify Solution">0</Parameter>
-			<Parameter name="Range">0.05</Parameter>
+			<Parameter name="Range">0.25</Parameter>
 		</Parameters>
 		<Queries>
 			<Query>
-				<Init>0.837 0.025 0.258</Init>
-				<Goal>0.068 0.346 0.327</Goal>
+				<Init>0.6 0.5 0.99 0.28 0.99 0.86 0.99 0.5 0.5</Init>
+				<Goal>0.079 0.871 0.544 0.579 0.609 0.5 0.5 0.5 0.5</Goal>
 			</Query>
 		</Queries>
 	</Planner>

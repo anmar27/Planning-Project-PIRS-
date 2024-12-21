@@ -1,0 +1,11 @@
+<Benchmark Name = "Pick_benchmark">
+    <Problem File="final_tiago_restaurant_Pick_comp_RRTC1.xml" PlannerAlias="RRTC-Complex-0.01"/>
+    <Problem File="final_tiago_restaurant_Pick_comp_RRTC2.xml" PlannerAlias="RRTC-Complex-0.05"/>
+    <Problem File="final_tiago_restaurant_Pick_comp_RRTC3.xml" PlannerAlias="RRTC-Complex-0.10"/>
+	<Problem File="final_tiago_restaurant_Pick_comp_RRTC4.xml" PlannerAlias="RRTC-Complex-0.25"/>
+    <Problem File="final_tiago_restaurant_Pick_comp_RRTC5.xml" PlannerAlias="RRTC-Complex-0.50"/>
+    <Parameter Name="maxTime" Value="50.0" />
+    <Parameter Name="runCount" Value="10" />
+    <Parameter Name="maxMem" Value="12000.0" />
+    <Parameter Name="filename" Value="result_Pick_RRT_Range.log" />
+</Benchmark>

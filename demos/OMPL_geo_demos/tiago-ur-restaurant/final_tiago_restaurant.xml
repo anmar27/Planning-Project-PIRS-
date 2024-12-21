@@ -38,13 +38,8 @@
 		</Parameters>
 		<Queries>
 			<Query>
-<<<<<<< HEAD
 				<Init>0.837 0.025 0.258</Init>
 				<Goal>0.068 0.346 0.327</Goal>
-=======
-				<Init dim="3">0.837 0.025 0.258</Init>
-				<Goal dim="3">0.837 0.025 0.258</Goal>
->>>>>>> origin/amf-branch
 			</Query>
 		</Queries>
 	</Planner>
